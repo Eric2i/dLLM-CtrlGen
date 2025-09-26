@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="description"
+            content="Unveiling the Potential of Diffusion Large Language Model in Controllable Generation."
+        />
+        <meta
+            name="keywords"
+            content="diffusion LLM, dLLM, controllable generation, structured output, schema scaffolding, JSON, reverse reasoning"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            Unveiling the Potential of Diffusion Large Language Model in
+            Controllable Generation
+        </title>
+
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-PYVRSFMDRL");
+        </script>
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./static/css/bulma.min.css" />
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+        />
+        <link rel="stylesheet" href="./static/css/index.css" />
+        <link rel="icon" href="./static/images/favicon.svg" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a
+                    role="button"
+                    class="navbar-burger"
+                    aria-label="menu"
+                    aria-expanded="false"
+                >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu"></div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">
+                                Unveiling the Potential of Diffusion Large
+                                Language Model in Controllable Generation
+                            </h1>
+
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"
+                                    ><a href="https://eric2i.com/">Zhen Xiong</a
+                                    ><sup>1</sup>,</span
+                                >
+                                <span class="author-block"
+                                    ><a href="https://vanoracai.github.io/"
+                                        >Yujun Cai</a
+                                    ><sup>2</sup>,</span
+                                >
+                                <span class="author-block"
+                                    ><a href="https://github.com/Lizhecheng02"
+                                        >Zhecheng Li</a
+                                    ><sup>3</sup>,</span
+                                >
+                                <span class="author-block"
+                                    ><a href="https://wangywust.github.io/"
+                                        >Yiwei Wang</a
+                                    ><sup>4</sup></span
+                                >
+                            </div>
+
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <sup>1</sup>University of Southern
+                                    California,
+                                </span>
+                                <span class="author-block">
+                                    <sup>2</sup>University of Queensland,
+                                </span>
+                                <div></div>
+                                <span class="author-block">
+                                    <sup>3</sup>University of California, San
+                                    Diego,
+                                </span>
+                                <span class="author-block">
+                                    <sup>4</sup>University of California, Merced
+                                </span>
+                            </div>
+
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <span class="link-block">
+                                        <a
+                                            href="#"
+                                            class="external-link button is-normal is-rounded is-dark"
+                                            aria-disabled="true"
+                                        >
+                                            <span class="icon"
+                                                ><i class="fas fa-file-pdf"></i
+                                            ></span>
+                                            <span>Paper (coming soon)</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a
+                                            href="#"
+                                            class="external-link button is-normal is-rounded is-dark"
+                                            aria-disabled="true"
+                                        >
+                                            <span class="icon"
+                                                ><i class="ai ai-arxiv"></i
+                                            ></span>
+                                            <span>arXiv (coming soon)</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a
+                                            href="https://github.com/Eric2i/dLLM-CtrlGen"
+                                            class="external-link button is-normal is-rounded is-dark"
+                                        >
+                                            <span class="icon"
+                                                ><i class="fab fa-github"></i
+                                            ></span>
+                                            <span>Code</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body">
+                    <h2 class="subtitle has-text-centered">
+                        Self-adaptive Schema Scaffolding (S<sup>3</sup>) unlocks
+                        robust, controllable structured generation in diffusion
+                        large language models by leveraging reverse reasoning
+                        and global context awareness.
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                Controllable generation is a fundamental task in
+                                NLP with many applications, providing a basis
+                                for function calling to agentic communication.
+                                However, even state-of-the-art autoregressive
+                                Large Language Models (LLMs) today exhibit
+                                unreliability when required to generate
+                                structured output. Inspired by the current new
+                                diffusion-based large language models (dLLM), we
+                                realize that the architectural difference,
+                                especially the global information-sharing
+                                mechanism for language modeling, may be the key
+                                to unlock next-level controllable generation. To
+                                explore the possibility, we propose
+                                <b>Self-adaptive Schema Scaffolding</b>
+                                (S<sup>3</sup>), a novel framework that enables
+                                dLLM to stably generate reliable structured
+                                outputs (e.g., JSON) by utilizing its innate
+                                reverse reasoning capability and global context
+                                awareness. S<sup>3</sup> initiates a schematic
+                                template directly in the output context as a
+                                starting state for dLLM, offering a more robust
+                                and general method than intricate prompt
+                                optimization. Experiments demonstrate that our
+                                method substantially unlocks the dLLM’s
+                                potential in controllable generation in terms of
+                                structure adherence, content fidelity, and
+                                faithfulness. These results establish new
+                                perspectives and practical pathways for
+                                deploying language models in controllable
+                                generation tasks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optional: BibTeX -->
+        <!--<section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+                <pre><code>@article{xiong2025unveiling,
+  title={Unveiling the Potential of Diffusion Large Language Model in Controllable Generation},
+  author={Xiong, Zhen and Cai, Yujun and Li, Zhecheng and Wang, Yiwei},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2025}
+}</code></pre>
+            </div>
+        </section>-->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link" href="#" aria-disabled="true">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a
+                        class="icon-link"
+                        href="https://github.com/Eric2i/dLLM-CtrlGen"
+                        class="external-link"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
