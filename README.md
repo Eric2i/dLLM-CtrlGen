@@ -5,9 +5,11 @@
 
 > **The Potential of Diffusion Large Language Model in Controllable Generation**
 > 
-> Zhen Xiong¹, Yujun Cai², Zhecheng Li³, Yiwei Wang⁴
+> 🎉 Officially accepted by the ICRL 2026
 >
->¹USC, ²UQ, ³UCSD, ⁴UC Merced
+> Zhen Xiong¹, Yujun Cai²˒³(*), Zhecheng Li⁴, Yiwei Wang⁵
+>
+>¹USC, ²UQ, ³Ant Group, ⁴UCSD, ⁵UC Merced
 
 This toolbox implements **Self-adaptive Schema Scaffolding (S3)** for controllable generation with diffusion large language models (dLLMs).
 
